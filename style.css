@@ -1,0 +1,155 @@
+/* ===== RohanTech Solutions - edit colours here ===== */
+:root{
+  --navy:#0B2447;      /* main dark blue */
+  --navy-deep:#071A35; /* darker blue for contact + footer */
+  --blue:#2F6FED;      /* buttons and links on white */
+  --sky:#8DB5FF;       /* accents on dark blue */
+  --mist:#EEF3FB;      /* light section background */
+  --ink:#14213A;       /* body text */
+  --muted:#51607A;
+  --white:#fff;
+  --wa:#128C4A;        /* WhatsApp button (dark enough for white text) */
+  --radius:10px;
+  --head:"Archivo","Segoe UI",Arial,sans-serif;
+  --body:"Public Sans","Segoe UI",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;font-family:var(--body);color:var(--ink);background:var(--white);line-height:1.65;font-size:1.0625rem}
+img{max-width:100%;height:auto}
+a{color:var(--blue)}
+h1,h2,h3{font-family:var(--head);line-height:1.15;margin:0 0 .5em;color:var(--navy)}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--white);color:var(--navy);padding:.6rem 1rem;z-index:100}
+.skip:focus{left:0}
+
+/* Buttons */
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:var(--radius);font-weight:600;text-decoration:none;border:2px solid transparent;cursor:pointer;font:600 1rem var(--body);transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#0F7A41}
+.btn-ghost{border-color:var(--sky);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.1)}
+.btn-small{background:var(--blue);color:#fff;padding:.55rem 1.1rem}
+
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:#fff;color:var(--navy);box-shadow:0 1px 0 #DDE6F4}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:70px;gap:1rem}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font:700 1.15rem var(--head)}
+.brand img{display:block;height:46px;width:auto}
+.site-header :focus-visible{outline-color:var(--blue)}
+.nav{display:flex;align-items:center;gap:1.4rem}
+.nav a:not(.btn){color:var(--navy);text-decoration:none;font-weight:500}
+.nav a:not(.btn):hover{color:var(--blue)}
+.menu-btn{display:none;background:none;color:var(--navy);border:2px solid var(--blue);border-radius:8px;padding:.45rem .9rem;font:600 .95rem var(--body)}
+
+/* Hero */
+.hero{background:var(--navy);color:#fff;padding:4rem 0 5rem}
+.hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:3rem;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800;max-width:16ch}
+.kicker{color:var(--sky);font-weight:600;margin:0 0 1rem}
+.lead{font-size:1.15rem;max-width:52ch;color:#D5E2F7}
+.cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.panel{background:var(--white);color:var(--ink);border-radius:14px;padding:1.6rem 1.7rem;border-left:6px solid var(--blue)}
+.panel h2{font-size:1.2rem;margin-bottom:.8rem}
+.panel ul{list-style:none;margin:0;padding:0}
+.panel li{padding:.65rem 0 .65rem 1.9rem;border-top:1px solid #DDE6F4;position:relative}
+.panel li:first-child{border-top:0}
+.panel li::before{content:"";position:absolute;left:.2rem;top:1.05rem;width:.55rem;height:.9rem;border:solid var(--blue);border-width:0 3px 3px 0;transform:rotate(40deg) scale(.8)}
+.panel-foot{margin:.9rem 0 0;font-size:.92rem;color:var(--muted)}
+/* one page-load reveal */
+.hero-copy,.panel{animation:rise .7s ease both}
+.panel{animation-delay:.15s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* Sections */
+.section{padding:4.5rem 0}
+.tint{background:var(--mist)}
+.section-title{font-size:clamp(1.7rem,3.5vw,2.3rem)}
+.section-intro{color:var(--muted);max-width:60ch;margin:0 0 2rem}
+.section-intro.light{color:#C5D5EE}
+
+/* Services list */
+.svc-list{list-style:none;margin:0;padding:0;border-top:2px solid var(--navy)}
+.svc-list li{display:flex;justify-content:space-between;align-items:center;gap:1.5rem;padding:1.3rem 0;border-bottom:1px solid #D3DDEE}
+.svc-list h3{font-size:1.2rem;margin-bottom:.25rem}
+.svc-list p{margin:0;color:var(--muted);max-width:58ch}
+.svc-list a{white-space:nowrap;font-weight:600}
+
+/* Steps */
+.steps{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.steps li{border-top:4px solid var(--blue);padding-top:1rem}
+.steps h3{font-size:1.2rem}
+.steps p{margin:0;color:var(--muted)}
+
+/* About */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem;align-items:start}
+.about p{max-width:62ch}
+.about-sub{font:700 1.2rem var(--head);color:var(--blue);margin:0 0 1rem}
+.trust{background:var(--mist);border-radius:14px;padding:1.6rem 1.7rem}
+.trust h3{font-size:1.15rem}
+.trust ul{margin:0;padding-left:1.2rem}
+.trust li{margin:.4rem 0}
+
+/* Gallery + reviews placeholders */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.ph{margin:0;border:2px dashed #9DB2D6;border-radius:var(--radius);background:var(--white);color:var(--muted);display:flex;align-items:center;justify-content:center;text-align:center;padding:1.2rem}
+.gallery .ph{min-height:200px}
+.gallery img{border-radius:var(--radius);display:block;width:100%;height:200px;object-fit:cover}
+.review{max-width:680px;flex-direction:column;align-items:flex-start;text-align:left;margin:1.5rem 0 0}
+.review p{margin:0 0 .6rem}
+.review footer{font-weight:600}
+
+/* FAQ */
+.faq details{border-bottom:1px solid #C9D6EC;padding:.2rem 0}
+.faq details:first-of-type{border-top:2px solid var(--navy);margin-top:1.5rem}
+.faq summary{cursor:pointer;font:600 1.1rem var(--head);color:var(--navy);padding:1rem 2rem 1rem 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:.2rem;top:.7rem;font-size:1.6rem;color:var(--blue)}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:0 0 1.1rem;max-width:68ch;color:var(--muted)}
+
+/* Contact */
+.contact{background:var(--navy-deep);color:#fff}
+.contact .section-title{color:#fff}
+.contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:start}
+.details dt{color:var(--sky);font-weight:600;margin-top:1.2rem}
+.details dd{margin:.1rem 0 0}
+.details a{color:#fff}
+.form{background:var(--white);color:var(--ink);padding:1.8rem;border-radius:14px;display:grid;gap:.5rem}
+.form label{font-weight:600}
+.form input,.form textarea{width:100%;padding:.75rem .9rem;border:2px solid #B8C6DF;border-radius:8px;font:inherit;color:var(--ink)}
+.form input:focus,.form textarea:focus{border-color:var(--blue);outline:none}
+.form .btn{margin-top:.6rem}
+.note{margin:0;font-size:.9rem;color:var(--muted)}
+.error{margin:0;color:#B3261E;font-weight:600}
+
+/* Footer */
+.site-footer{background:#04122A;color:#C5D5EE;padding:2.5rem 0 1rem}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:2rem}
+.site-footer strong{color:#fff;font-family:var(--head);font-size:1.1rem}
+.site-footer p{margin:.4rem 0 0}
+.site-footer a{color:#C5D5EE}
+.site-footer nav{display:flex;flex-direction:column;gap:.4rem}
+.site-footer .copy{margin:2rem auto 0;font-size:.9rem;border-top:1px solid #1D3157;padding-top:1rem}
+
+/* Floating WhatsApp */
+.wa-float{position:fixed;right:1.1rem;bottom:1.1rem;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:60}
+
+/* Responsive */
+@media (max-width:860px){
+  .hero-grid,.about,.contact-grid{grid-template-columns:1fr}
+  .steps,.gallery{grid-template-columns:1fr}
+  .menu-btn{display:block}
+  .nav{display:none;position:absolute;left:0;right:0;top:70px;background:#fff;box-shadow:0 8px 16px rgba(11,36,71,.12);flex-direction:column;align-items:flex-start;padding:1rem 1.25rem 1.5rem;gap:1rem}
+  .nav.open{display:flex}
+  .svc-list li{flex-direction:column;align-items:flex-start;gap:.6rem}
+  .hero{padding:3rem 0 3.5rem}
+  .section{padding:3.2rem 0}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero-copy,.panel{animation:none}
+  .btn{transition:none}
+}
