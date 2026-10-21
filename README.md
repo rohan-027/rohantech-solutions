@@ -4,9 +4,9 @@ Plain HTML, CSS and JavaScript. No build step, no paid tools.
 
 ## Folder layout
 - `index.html` - all page content (one page with sections)
-- `css/style.css` - colours (top of file), fonts and layout
-- `js/main.js` - mobile menu and the WhatsApp contact form
-- `images/` - favicon and any photos you add
+- `style.css` - colours (top of file), fonts and layout
+- `main.js` - mobile menu and the WhatsApp contact form
+- `favicon.png`, `rohantech-logo.png` - logo files. Put any photos you add in the same place
 - `robots.txt` - tells search engines they may index the site
 
 ## 1. Preview on your computer
@@ -31,12 +31,12 @@ Cloudflare Pages is an equally free alternative (pages.cloudflare.com > Create p
 The domain itself is paid (registrar's yearly fee, often Rs 500-1,000+). Hosting and HTTPS are free.
 
 ## 4. Updating the site later
-- **Text, phone, email:** open `index.html` in any text editor and use Find (Ctrl+F). The phone number appears in several places (`917396345795` and `+91 73963 45795`) and also in `js/main.js`. Change all of them.
+- **Text, phone, email:** open `index.html` in any text editor and use Find (Ctrl+F). The phone number appears in several places (`917396345795` and `+91 73963 45795`) and also in `main.js`. Change all of them.
 - **FAQ:** each question is one `<details>` block inside the FAQ section. Copy one to add another.
 - **Services:** each service is one `<li>` inside `<ul class="svc-list">`. Copy one to add another.
-- **Photos:** put images in `images/`, then follow the comment in the "Our work" section. Always fill in the `alt` text. Keep photos under about 300 KB (resize first).
+- **Photos:** put images in the main folder, then follow the comment in the "Our work" section. Always fill in the `alt` text. Keep photos under about 300 KB (resize first).
 - **Reviews:** replace the placeholder `<blockquote>` with a real review only with the customer's permission.
-- **Colours:** change the values at the top of `css/style.css`.
+- **Colours:** change the values at the top of `style.css`.
 - **Social links:** add them in the footer where the comment says EDIT.
 - After editing, upload the changed files to GitHub again (Add file > Upload files > Commit). The site updates in a minute or two.
 
